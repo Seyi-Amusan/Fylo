@@ -1,5 +1,4 @@
 @import 'layout';
-@import 'mixins';
 
 :root{
     --blue: hsl(238, 22%, 44%);
@@ -14,19 +13,24 @@
     &__list{
         &--item{
             font-family: 'Raleway', sans-serif;
-            font-size: 1rem;
+            font-size: 2rem;
             text-decoration: none;
             list-style: none;
             transition: all .1s;
             &:hover,
             &:active{
-                padding: .8rem;
+                padding: 1.8rem;
                 background-color: rgba($color: #777373, $alpha: .1);
                 transform: translateY(-3px);
             }
             a:link{
                 text-decoration: none;
             }
+            @media (max-width:450px){
+                font-size: 1.5rem
+            }
+
+
         }
     }
 }
@@ -47,24 +51,24 @@
     font-family: 'Raleway', sans-serif;
     &__link-box--link{
         &:link{
-        font-size: 1rem;
+        font-size: 2rem;
         color: var(--cyan);
-        margin-right: .5rem;
+        margin-right: 1.5rem;
         }
     }
     &__testimonial{
         box-shadow: 2px 2px .5rem rgba($color: #000000, $alpha: .1);
         &--profile-box{
             .user-photo{
-                width: 2rem;
+                width: 3rem;
                 border-radius: 100%;
             }
             .user-name{
                 font-weight: bold;
-                font-size: .8rem;
+                font-size: 1.8rem;
             }
             .user-role{
-                font-size: .6rem;
+                font-size: 1.6rem;
             }
         }
     }
@@ -89,18 +93,17 @@
     }
     &__input{
         width: 60%;
-        height: 2.5rem;
+        height: 5rem;
         display: block;
-        margin-bottom: 1rem;
-        padding-left: .8rem;
+        margin-bottom: 2rem;
+        padding-left: 1.8rem;
         @media (max-width:800px){
             width: 90%;
-            padding-left: 35%;
         }
     }
 
     &__button{
-        height: 2.5rem;
+        height: 5rem;
         width: 30%;
         @media (max-width:800px){
             width: 90%;
@@ -121,14 +124,14 @@
             &-link{
                 text-decoration: none;
                 color: currentColor;
-                font-size: .8rem;
+                font-size: 1.8rem;
             }
         }
 
         &--social-media{
             &-icon{
-                height: 1rem;
-                width: 1rem;
+                height: 2rem;
+                width: 2rem;
                 cursor: pointer;
                 box-sizing: content-box;
                 padding: 3px;
@@ -141,19 +144,19 @@
 
 
 .heading-1{
-    font-size: 1.6rem;
+    font-size: 2.6rem;
     font-family: 'Raleway', sans-serif;
     font-weight: 700;
 }
 
 .paragraph{
-    font-size: 1rem;
+    font-size: 2rem;
     font-family: 'Raleway', sans-serif;
     font-weight: 400;
 }
 
 .small{
-    font-size: .8rem;
+    font-size: 1.8rem;
 }
 
 .button{

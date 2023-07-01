@@ -4,14 +4,21 @@
     box-sizing: inherit;
 }
 
-body{
-    font-size: 62.5%;
+html{
     box-sizing: border-box;
+    font-size: 62.5%;
 }
 
+body{
+    display: grid;
+    grid-template-columns: 99.99vw;
+}
+
+
+
 .nav{
-    margin: 4rem;
-    margin-bottom: 5rem;
+    margin: 5rem;
+    margin-bottom: 6rem;
 
     display: flex;
     justify-content: space-between;
@@ -24,13 +31,13 @@ body{
     }
 
     @media (max-width:960px){
-        margin: 2rem;
+        margin: 3rem;
     }
     &__list{
         display: flex;
         justify-content: space-evenly;
         align-items: center;
-        width: 20rem;
+        width: 30rem;
         @media (max-width:600px){
             width: 55%;
         }
@@ -41,21 +48,21 @@ body{
     display: grid;
     grid: max-content max-content / 1fr 1fr;
 
-    margin: 4rem;
+    margin: 5rem;
     @media (max-width:960px){
-        margin: 2rem;
-        row-gap: 1.5rem;
+        margin: 3rem;
+        row-gap: 2.5rem;
     }
 
     @media (max-width:800px){
-        grid: auto / calc(100vw - 4rem);
+        grid: auto / calc(100vw - 6rem);
     }
 
     &__text-box{
         align-self: center;
 
         &--heading{
-            margin-bottom: 1rem;
+            margin-bottom: 2rem;
         }
     }
     &__button-box{
@@ -71,19 +78,18 @@ body{
         }
     }
     &__input{
-        height: 2.5rem;
+        height: 5rem;
         width: 45%;
-        margin-right: 1rem;
+        margin-right: 2rem;
         @media (max-width:800px){
             margin-right: 0;
             width: 90%;
-            margin-bottom: 1rem;
-            padding-left: 37%;
+            margin-bottom: 2rem;
         }
     }
 
     &__button{
-        height: 2.5rem;
+        height: 5rem;
         width: 30%;
         @media (max-width:800px){
             width: 90%;
@@ -102,32 +108,32 @@ body{
 }
 
 .main{
-    margin: 4rem 0 0;
+    margin: 5rem 0 0;
     background-image: url(images/bg-curve-desktop.svg);
     background-size: cover;
     background-position: center;
 
     display: grid;
     grid-template-columns: 1fr 1fr;
-    row-gap: 1.3rem;
-    column-gap: 2rem;
+    row-gap: 2.3rem;
+    column-gap: 3rem;
     align-items: center;
 
     @media (max-width:960px){
-        row-gap: .5rem;
+        row-gap: 1.5rem;
         justify-content: center;
     }
 
     @media (max-width:800px){
         grid: auto / calc(100vw - 6rem);
-        row-gap: 2rem;
+        row-gap: 3rem;
     }
 
     & > *:not(:last-child){
-        margin-left: 4rem;
+        margin-left: 5rem;
 
         @media (max-width:960px){
-            margin-left: 2rem;
+            margin-left: 3rem;
         }
 
         @media (max-width:800px){
@@ -136,7 +142,7 @@ body{
     }
 
     &__header{
-        margin-top: 4rem;
+        margin-top: 5rem;
         @media (max-width:800px){
             text-align: center;
         }
@@ -152,7 +158,7 @@ body{
         @media (max-width:800px){
             grid-column: 1/2;
             grid-row: 1/2;
-            margin-top: 2rem;
+            margin-top: 3rem;
         }
     }
     &__img{
@@ -166,29 +172,29 @@ body{
     &__link-box{
         display: flex;
         align-items: center;
-        margin-bottom: .8rem;
+        margin-bottom: 1.8rem;
         @media (max-width:800px){
             justify-self: center;
         }
     }
 
     &__testimonial{
-        width: 20rem;
+        width: 30rem;
         background-color: #fff;
-        padding: 1.5rem;
-        margin-bottom: 4rem;
+        padding: 2.5rem;
+        margin-bottom: 5rem;
 
         display: grid;
-        row-gap: .8rem;
+        row-gap: 1.8rem;
 
         @media (max-width:800px){
             justify-self: center;
         }
         &--profile-box{
-            height: 3.2rem;
+            height: 4.2rem;
 
             display: grid;
-            grid: 1fr 1fr / 3.2rem 1fr;
+            grid: 1fr 1fr / 4.2rem 1fr;
             .user-photo{
                 grid-row: 1/3;
                 align-self: center;
@@ -201,15 +207,15 @@ body{
 }
 
 .section{
-    padding: 3.5rem 3rem;
+    padding: 4.5rem 4rem;
 
     display: grid;
     grid: auto / 1fr 1fr;
     column-gap: 12%;
-    row-gap: 2rem;
+    row-gap: 3rem;
 
     @media (max-width:960px){
-        padding: 3.5rem 2rem;
+        padding: 4.5rem 3rem;
     }
 
     @media (max-width:800px){
@@ -235,12 +241,12 @@ body{
 }
 
 .footer{
-    padding: 4rem;
+    padding: 5rem;
     display: grid;
-    row-gap: 2rem;
+    row-gap: 3rem;
 
     @media (max-width:960px){
-        padding: 2rem;
+        padding: 3rem;
     }
 
     &__nav{
@@ -251,14 +257,14 @@ body{
 
         @media (max-width:700px){
             grid-auto-flow: row;
-            row-gap: 3rem;
+            row-gap: 4rem;
         }
     
 
         &--contact-box > *{
             display: grid;
             grid-template-columns: max-content 1fr;
-            column-gap: .5rem;
+            column-gap: 1.5rem;
             grid-auto-flow: column;
 
             &:not(:last-child){
@@ -268,7 +274,7 @@ body{
 
         & > *:not(:last-child){
             display: grid;
-            grid-gap: 1rem;
+            grid-gap: 2rem;
         }
     }
     
